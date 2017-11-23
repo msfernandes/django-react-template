@@ -15,3 +15,4 @@ mock = "*"
 
 python-decouple = "*"
 django = "*"
+django-debug-toolbar = "*"
