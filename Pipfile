@@ -1,13 +1,19 @@
 [[source]]
+
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
+
 [dev-packages]
+
 ipdb = "*"
 mock = "*"
 
+
 [packages]
+
 python-decouple = "*"
 django-debug-toolbar = "*"
-Django = "*"
+django = "*"
+django-webpack-loader = "*"
