@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = config('SECRET_KEY', default='secret')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*', cast=Csv())
 ROOT_URLCONF = 'project_name.urls'
 WSGI_APPLICATION = 'project_name.wsgi.application'
 
@@ -137,6 +137,14 @@ STATICFILES_FINDERS = (
 COMPRESS_PRECOMPILERS = (
     ('module', 'compressor_toolkit.precompilers.ES6Compiler'),
 )
+
+COMPRESS_JS_FILTERS = [
+    'compressor.filters.yuglify.YUglifyJSFilter',
+]
+
 COMPRESS_NODE_MODULES = os.path.join(BASE_DIR, '../node_modules')
 COMPRESS_BROWSERIFY_BIN = os.path.join(BASE_DIR,
                                        '../node_modules/.bin/browserify')
+COMPRESS_YUGLIFY_BINARY = os.path.join(BASE_DIR,
+                                       '../node_modules/.bin/yuglify')
+COMPRESS_OFFLINE = config('COMPRESS_OFFLINE', default=False, cast=bool)
