@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'compressor',
     'compressor_toolkit',
+    'livereload',
 ]
 
 MIDDLEWARE = [
@@ -35,6 +36,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'livereload.middleware.LiveReloadScript',
 ]
 
 
