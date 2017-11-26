@@ -137,3 +137,6 @@ STATICFILES_FINDERS = (
 COMPRESS_PRECOMPILERS = (
     ('module', 'compressor_toolkit.precompilers.ES6Compiler'),
 )
+COMPRESS_NODE_MODULES = os.path.join(BASE_DIR, '../node_modules')
+COMPRESS_BROWSERIFY_BIN = os.path.join(BASE_DIR,
+                                       '../node_modules/.bin/browserify')
