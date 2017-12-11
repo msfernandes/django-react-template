@@ -5,9 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello Django + React Template</title>
+    {% compress css %}
+      <link rel="stylesheet" type="text/x-sass" href="{% static 'style/style.sass' %}">
+    {% endcompress %}
 </head>
 <body>
-    <div id="react-app"></div>
+    <main id="react-app"></main>
 
     {% compress js %}
       <script type="module" src="{% static 'js/index.jsx' %}"></script>

@@ -136,6 +136,7 @@ STATICFILES_FINDERS = (
 
 COMPRESS_PRECOMPILERS = (
     ('module', 'compressor_toolkit.precompilers.ES6Compiler'),
+    ('text/x-sass', 'compressor_toolkit.precompilers.SCSSCompiler'),
 )
 
 COMPRESS_JS_FILTERS = [
@@ -143,6 +144,9 @@ COMPRESS_JS_FILTERS = [
 ]
 
 COMPRESS_NODE_MODULES = os.path.join(BASE_DIR, '../node_modules')
+COMPRESS_POSTCSS_BIN = os.path.join(BASE_DIR, '../node_modules/.bin/postcss')
+COMPRESS_NODE_SASS_BIN = os.path.join(BASE_DIR,
+                                      '../node_modules/.bin/node-sass')
 COMPRESS_BROWSERIFY_BIN = os.path.join(BASE_DIR,
                                        '../node_modules/.bin/browserify')
 COMPRESS_YUGLIFY_BINARY = os.path.join(BASE_DIR,

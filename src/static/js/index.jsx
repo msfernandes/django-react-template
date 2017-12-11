@@ -4,8 +4,9 @@ import ReactDOM from 'react-dom';
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Hello World</h1>
+      <div className="default-container">
+        <h1>Hello World!</h1>
+        <p>This is a Django + React.js Template</p>
       </div>
     );
   }
